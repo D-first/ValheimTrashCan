@@ -9,7 +9,7 @@ using ValheimLib;
 
 namespace ValheimTrashCan
 {
-    [BepInPlugin("dfirst.ValheimTrashCan", "Valheim Trash Can", "1.0.0-dev")]
+    [BepInPlugin("dfirst.ValheimTrashCan", "Valheim Trash Can", "1.0.1")]
     [BepInDependency(JotunnLib.JotunnLib.ModGuid)]
     public class ValheimTrashCan : BaseUnityPlugin
     {
@@ -22,10 +22,6 @@ namespace ValheimTrashCan
         {
             PrefabManager.Instance.PrefabRegister += RegisterPrefabs;
             PieceManager.Instance.PieceRegister += RegisterPieces;
-
-            /* ValheimLib Conflict */
-            //LocalizationManager.Instance.RegisterTranslation(TRASH_PIECE_NAME.TrimStart('$'), "Trash Can");
-            //LocalizationManager.Instance.RegisterTranslation("piece_dfirst_trash_description", "A trash can that connected to another dimension. No one knows where the garbage goes.");
 
             Language.AddToken(TRASH_PIECE_NAME, "Trash Can", TOKEN_LANGUAGE);
             Language.AddToken(TRASH_PIECE_DESC, "A trash can that connected to another dimension. No one knows where the garbage goes.", TOKEN_LANGUAGE);
