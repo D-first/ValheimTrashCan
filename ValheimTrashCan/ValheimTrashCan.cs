@@ -5,15 +5,17 @@ using JotunnLib.Managers;
 using System;
 using UnityEngine;
 using ValheimTrashCan.Utils;
+using ValheimLib;
 
 namespace ValheimTrashCan
 {
-    [BepInPlugin("dfirst.ValheimTrashCan", "Valheim Trash Can", "1.0.0")]
+    [BepInPlugin("dfirst.ValheimTrashCan", "Valheim Trash Can", "1.0.1")]
     [BepInDependency(JotunnLib.JotunnLib.ModGuid)]
     public class ValheimTrashCan : BaseUnityPlugin
     {
         private static readonly string TRASH_PIECE_NAME = "$piece_dfirst_trash";
         private static readonly string TRASH_PIECE_DESC = "$piece_dfirst_trash_description";
+        private static readonly string TOKEN_LANGUAGE = "English";
         private readonly Harmony harmony = new Harmony("dfirst.ValheimTrashCan");
 
         private void Awake()
@@ -21,8 +23,8 @@ namespace ValheimTrashCan
             PrefabManager.Instance.PrefabRegister += RegisterPrefabs;
             PieceManager.Instance.PieceRegister += RegisterPieces;
 
-            LocalizationManager.Instance.RegisterTranslation(TRASH_PIECE_NAME.TrimStart('$'), "Trash Can");
-            LocalizationManager.Instance.RegisterTranslation(TRASH_PIECE_DESC.TrimStart('$'), "A trash can that connected to another dimension. No one knows where the garbage goes.");
+            Language.AddToken(TRASH_PIECE_NAME, "Trash Can", TOKEN_LANGUAGE);
+            Language.AddToken(TRASH_PIECE_DESC, "A trash can that connected to another dimension. No one knows where the garbage goes.", TOKEN_LANGUAGE);
 
             harmony.PatchAll();
         }
