@@ -84,9 +84,9 @@ namespace ValheimTrashCan
         }
 
         [HarmonyPatch(typeof(Container), nameof(Container.Interact))]
-        class DustBoxPatch
+        class ContainerInteractPatch
         {
-            static void Prefix(ref string ___m_name, ref Inventory ___m_inventory)
+            static void Prefix(string ___m_name, Inventory ___m_inventory)
             {
                 if (___m_name != TRASH_PIECE_NAME)
                 {
