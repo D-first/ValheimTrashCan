@@ -45,8 +45,8 @@
     <Reference Include="BepInEx">
       <HintPath>..\..\..\..\..\..\Program Files (x86)\Steam\steamapps\common\Valheim\BepInEx\core\BepInEx.dll</HintPath>
     </Reference>
-    <Reference Include="Jotunn-DEBUG-v1.0.1-rc5">
-      <HintPath>..\..\..\..\..\..\Program Files (x86)\Steam\steamapps\common\Valheim\BepInEx\plugins\Jotunn-DEBUG-v1.0.1-rc5.dll</HintPath>
+    <Reference Include="Jotunn">
+      <HintPath>..\..\..\..\..\..\Program Files (x86)\Steam\steamapps\common\Valheim\BepInEx\plugins\Jotunn.dll</HintPath>
     </Reference>
     <Reference Include="UnityEngine">
       <HintPath>..\..\..\..\..\..\Program Files (x86)\Steam\steamapps\common\Valheim\unstripped_managed\UnityEngine.dll</HintPath>
