@@ -19,11 +19,11 @@ namespace ValheimTrashCan
 
         private void Awake()
         {
-            RegisterPrefabs();
+            AddPiece();
             harmony.PatchAll();
         }
 
-        private void RegisterPrefabs()
+        private void AddPiece()
         {
             var assetBundle = AssetBundleHelper.GetAssetBundleFromResources("trash");
             var trashAsset = assetBundle.LoadAsset<GameObject>("Assets/Pieces/TrashCan/TrashCan.prefab");
