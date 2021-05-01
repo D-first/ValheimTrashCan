@@ -25,7 +25,7 @@ namespace ValheimTrashCan
 
         private void AddPiece()
         {
-            var assetBundle = AssetBundleHelper.GetAssetBundleFromResources("trash");
+            var assetBundle = AssetBundleHelper.GetAssetBundleFromResources("Assets/trashcan");
             var trashAsset = assetBundle.LoadAsset<GameObject>("Assets/Pieces/TrashCan/TrashCan.prefab");
 
             CustomPiece piece = new CustomPiece(trashAsset,

@@ -58,13 +58,11 @@
       <HintPath>..\..\..\..\..\..\Program Files (x86)\Steam\steamapps\common\Valheim\unstripped_managed\UnityEngine.CoreModule.dll</HintPath>
     </Reference>
   </ItemGroup>
-  <ItemGroup>
-    <EmbeddedResource Include="trash" />
-  </ItemGroup>
   <ItemGroup />
   <ItemGroup>
-    <None Include="Translations\English\pictureframe.json" />
-    <None Include="Translations\Japanese\pictureframe.json" />
+    <None Include="Assets\Translations\English\pictureframe.json" />
+    <None Include="Assets\Translations\Japanese\pictureframe.json" />
+    <EmbeddedResource Include="Assets\trashcan" />
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 </Project>
