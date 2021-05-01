@@ -42,7 +42,6 @@ namespace ValheimTrashCan
                 new PieceConfig
                 {
                     PieceTable = "Hammer",
-                    Name = TRASH_PIECE_NAME,
                     Description = TRASH_PIECE_DESC,
                     Requirements = new[]
                    {
