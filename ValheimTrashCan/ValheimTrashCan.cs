@@ -45,13 +45,7 @@ namespace ValheimTrashCan
                     Description = TRASH_PIECE_DESC,
                     Requirements = new[]
                    {
-                       new RequirementConfig
-                       {
-                           Item = "Wood",
-                           Amount = 10,
-                           Recover = true
-                       },
-                        new RequirementConfig()
+                       new RequirementConfig()
                        {
                            Item = "FineWood",
                            Amount = 10,
