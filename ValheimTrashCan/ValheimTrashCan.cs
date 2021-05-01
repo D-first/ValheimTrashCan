@@ -15,21 +15,11 @@ namespace ValheimTrashCan
     {
         private static readonly string TRASH_PIECE_NAME = "$piece_dfirst_trash";
         private static readonly string TRASH_PIECE_DESC = "$piece_dfirst_trash_description";
-        private static readonly string TOKEN_LANGUAGE = "English";
         private readonly Harmony harmony = new Harmony("dfirst.ValheimTrashCan");
 
         private void Awake()
         {
             RegisterPrefabs();
-            LocalizationManager.Instance.AddLocalization(new LocalizationConfig(TOKEN_LANGUAGE)
-            {
-                Translations =
-                {
-                    { TRASH_PIECE_NAME.Trim('$'), "Trash Can" },
-                    { TRASH_PIECE_DESC.Trim('$'), "A trash can that connected to another dimension. No one knows where the garbage goes." }
-                }
-            });
-
             harmony.PatchAll();
         }
 

@@ -61,5 +61,10 @@
   <ItemGroup>
     <EmbeddedResource Include="trash" />
   </ItemGroup>
+  <ItemGroup />
+  <ItemGroup>
+    <None Include="Translations\English\pictureframe.json" />
+    <None Include="Translations\Japanese\pictureframe.json" />
+  </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 </Project>
