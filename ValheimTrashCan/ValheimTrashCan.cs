@@ -4,12 +4,13 @@ using Jotunn;
 using Jotunn.Configs;
 using Jotunn.Entities;
 using Jotunn.Managers;
+using Jotunn.Utils;
 using UnityEngine;
 using ValheimTrashCan.Utils;
 
 namespace ValheimTrashCan
 {
-    [BepInPlugin("dfirst.ValheimTrashCan", "Valheim Trash Can", "1.1.0")]
+    [BepInPlugin("dfirst.ValheimTrashCan", "Valheim Trash Can", "1.1.1")]
     [BepInDependency(Main.ModGuid)]
     public class ValheimTrashCan : BaseUnityPlugin
     {
@@ -27,6 +28,18 @@ namespace ValheimTrashCan
         {
             var assetBundle = AssetBundleHelper.GetAssetBundleFromResources("trashcan");
             var trashAsset = assetBundle.LoadAsset<GameObject>("Assets/Pieces/TrashCan/TrashCan.prefab");
+
+            Texture2D mainTex = AssetUtils.LoadTexture("ValheimTrashCan/Assets/Textures/main_texture.png");
+            Texture2D normalTex = AssetUtils.LoadTexture("ValheimTrashCan/Assets/Textures/normalmap_texture.png");
+            Renderer trashcanRenderer = trashAsset.transform.Find("New/woodtrash").gameObject.GetComponent<Renderer>();
+            if(mainTex != null)
+            {
+                trashcanRenderer.material.mainTexture = mainTex;
+            }
+            if(normalTex != null)
+            {
+                trashcanRenderer.material.SetTexture("_BumpMap", normalTex);
+            }
 
             CustomPiece piece = new CustomPiece(trashAsset,
                 new PieceConfig
