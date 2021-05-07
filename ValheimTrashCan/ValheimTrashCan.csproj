@@ -92,6 +92,7 @@
   <ItemGroup>
     <None Include="app.config" />
     <None Include="Assets\Translations\English\english.json" />
+    <None Include="Assets\Translations\German\german.json" />
     <None Include="Assets\Translations\Japanese\japanese.json" />
     <EmbeddedResource Include="Assets\trashcan" />
     <None Include="packages.config" />
