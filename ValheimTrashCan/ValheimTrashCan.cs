@@ -10,7 +10,7 @@ using ValheimTrashCan.Utils;
 
 namespace ValheimTrashCan
 {
-    [BepInPlugin("dfirst.ValheimTrashCan", "Valheim Trash Can", "1.1.0")]
+    [BepInPlugin("dfirst.ValheimTrashCan", "Valheim Trash Can", "1.1.1")]
     [BepInDependency(Main.ModGuid)]
     public class ValheimTrashCan : BaseUnityPlugin
     {
